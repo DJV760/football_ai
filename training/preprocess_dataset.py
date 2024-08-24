@@ -14,9 +14,10 @@ def load_data(image_dir, label_dir):
         label_path = os.path.join(label_dir, filename.replace('.jpg', '.txt'))
 
         image = cv2.imread(image_path)
+        resized_image = cv2.resize(image, (224, 224))
         label = load_label(label_path)
 
-        image_list.append(image)
+        image_list.append(resized_image)
         label_list.append(label)
         filename_list.append(filename)
 
@@ -33,14 +34,14 @@ def load_label(label_path):
 
     return None
 
-train_image_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\train\\images'
-train_label_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\train\\labels'
-test_image_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\test\\images'
-test_label_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\test\\labels'
+# train_image_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\train\\images'
+# train_label_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\train\\labels'
+# test_image_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\test\\images'
+# test_label_folder = 'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\training\\jersey_number_detection_dataset\\test\\labels'
 
-train_data = load_data(train_image_folder, train_label_folder)
-test_data = load_data(test_image_folder, test_label_folder)
-print(train_data[2][2])
-print(train_data[1][2])
-plt.imshow(train_data[0][2])
-plt.show()
+# train_data = load_data(train_image_folder, train_label_folder)
+# test_data = load_data(test_image_folder, test_label_folder)
+# print(train_data[2][2])
+# print(train_data[1][2])
+# plt.imshow(train_data[0][2])
+# plt.show()

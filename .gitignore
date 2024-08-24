@@ -1,7 +1,9 @@
 /training/jersey_number_detection_dataset/
-/training/jersey_number_classification_dataset/
+/training/soccernet_dataset/
 /input_videos/
 /runs/
 /venv/
 *.pt
 *.zip
+*.h5
+*.pyc
