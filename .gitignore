@@ -1,5 +1,9 @@
 /training/jersey_number_detection_dataset/
+/training/jersey_number_detection_dataset_2/
+/training/jersey_number_detection_dataset_3/
 /training/soccernet_dataset/
+/training/soccernet_dataset_expanded/
+/training/__pycache__/
 /input_videos/
 /runs/
 /venv/
