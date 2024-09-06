@@ -1,4 +1,4 @@
-from src.number_detection.preprocess_dataset import load_data
+from src.number_detection.preprocess_dataset import load_detection_data
 from matplotlib import pyplot as plt
 import numpy as np
 import cv2
@@ -10,7 +10,7 @@ def inference_vgg16(image_folder: str, label_folder: str, weights: str, seed: in
 
     ''' This function performs inference utilizing the trained VGG model '''
 
-    test_data = load_data(image_folder, label_folder)
+    test_data = load_detection_data(image_folder, label_folder)
 
     testImages = np.array(test_data[0])
     testTargets = np.array(test_data[1])

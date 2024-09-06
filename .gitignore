@@ -8,7 +8,10 @@
 /src/number_detection/__pycache__/
 /src/number_detection/vgg_weights/
 /src/number_classification/soccernet_dataset_cropped/
+/src/number_classification/soccernet_dataset_cropped - Copy/
 /src/number_classification/__pycache__/
+/src/number_classification/cnn_weights/
+/src/number_classification/classification_data/
 /input_videos/
 /runs/
 /venv/
