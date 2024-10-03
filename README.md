@@ -28,3 +28,5 @@ It is important to mention that this project implemented two approaches to the o
 
 ## Results
 By far representative results in high-level object detection are summarized in the following video.
+
+![High-level object detection GIF](media/game_gif.gif)
