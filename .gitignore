@@ -1,8 +1,12 @@
+*__pycache__
 /src/number_detection/jersey_number_detection_dataset/
 /src/number_detection/jersey_number_detection_dataset_copy/
 /src/number_detection/jersey_number_detection_dataset_2/
 /src/number_detection/jersey_number_detection_dataset_3/
-/src/number_detection/player_detection_dataset/
+/src/number_detection/jersey_number_detection_dataset_4/
+/src/number_detection/jersey_number_detection_dataset_5/
+/src/yolo/player_detection/player_detection_dataset/
+/src/yolo/player_detection/player_detection_dataset_2/
 /src/number_detection/soccernet_dataset/
 /src/number_detection/soccernet_dataset_expanded/
 /src/number_detection/__pycache__/
@@ -12,7 +16,10 @@
 /src/number_classification/__pycache__/
 /src/number_classification/cnn_weights/
 /src/number_classification/classification_data/
+/src/yolo/runs/
+/src/yolo/yolo_weights/
 /input_videos/
+/output_videos/
 /runs/
 /venv/
 /darknet/
@@ -23,3 +30,8 @@
 *.h5
 *.pyc
 *.names
+*.whl
+src/yolo/inference_yolo_video.py
+src/yolo/utils/test.py
+*.dataset.txt
+*.roboflow.txt

@@ -2,6 +2,9 @@ from src.number_detection.preprocess_dataset import load_detection_data, load_cl
 from src.number_classification.create_classification_dataset import create_number_classification_dataset, create_labels_for_dataset
 from src.number_detection.inference_vgg import inference_vgg16
 from src.number_classification.model import train_cnn
+from src.yolo.yolo_training import yolo_train
+from src.yolo.player_detection.yolo_player_detect_training import yolo_player_detection_train
+from src.yolo.fixNvPe import parseArgs, fixnvpe
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
@@ -11,7 +14,7 @@ session = tf.compat.v1.InteractiveSession(config=tf.compat.v1.ConfigProto(gpu_op
 
 def main():
 
-    with tf.device('/GPU:0'):
+    # with tf.device('/GPU:0'):
 
     ################################################### Number detection dataset creation #################################################
 
@@ -52,13 +55,18 @@ def main():
     ########################################################## CNN training #############################################################
 
     # load in training and test data
-        src_dataset = 'soccernet_dataset_cropped'
-        train_image_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\train\\images'
-        train_label_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\train\\labels'
-        test_image_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\test\\images'
-        test_label_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\test\\labels'
+        # src_dataset = 'soccernet_dataset_cropped'
+        # train_image_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\train\\images'
+        # train_label_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\train\\labels'
+        # test_image_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\test\\images'
+        # test_label_folder = f'C:\\Users\\z0224841\\PycharmProjects\\football_ai\\src\\number_classification\\{src_dataset}\\test\\labels'
 
-        train_cnn(train_image_folder, train_label_folder, test_image_folder, test_label_folder)
+        # train_cnn(train_image_folder, train_label_folder, test_image_folder, test_label_folder)
+
+        # args = parseArgs()
+        # fixnvpe(args)
+        # yolo_train()
+        yolo_player_detection_train()
 
 if __name__ == "__main__":
     main()
